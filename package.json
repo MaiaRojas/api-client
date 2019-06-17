@@ -1,0 +1,57 @@
+{
+  "name": "laboratoria-apiclient",
+  "version": "1.0.0",
+  "description": "This project helps you link any react app to our api.laboratoria.la",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laboratoria/APIClient.git"
+  },
+  "keywords": [
+    "APIClient",
+    "api",
+    "laboratoria",
+    "redux"
+  ],
+  "author": "Laboratoria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laboratoria/APIClient/issues"
+  },
+  "homepage": "https://github.com/Laboratoria/APIClient#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins":[
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  }
+}
