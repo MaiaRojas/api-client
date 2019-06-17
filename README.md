@@ -78,12 +78,15 @@ acción que haremos, de la siguiente forma :
 import APIClient from 'laboratoria-apiclient';
 
 const mapDispatchToProps = (dispatch) => {
-  getProfile : APIClient.getAPIActions().getApiCall(
-        APIClient.getAPIActionTypes()
-          .find(apiCall => apiCall.type === 'GET_USER_PROFILE'),
-        {
-          userId
-        }
-      ),
+  getProfile : (userId) => APIClient.getAPIActions().getApiCall(dispatch)(
+    APIClient.getAPIActionTypes()
+      .find(apiCall => apiCall.type === 'GET_USER_PROFILE'),
+    {
+      userId
+    }
+  ),
 }
 ```
+
+Aunque también se puede poner algo más genérico para hacer cualquier llamada GET
+o POST que se quiera.
