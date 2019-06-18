@@ -1,8 +1,8 @@
 import APIClient from './lib/APIClient';
 import reducers from './lib/reducers';
-import actions from './lib/actions';
+import action from './lib/actions';
 
 APIClient.getAPIReducers = () => reducers;
-APIClient.getAPIActions = () => actions;
+APIClient.doAPICall = action;
 
 export default APIClient;

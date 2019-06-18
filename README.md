@@ -43,6 +43,7 @@ APIClient.setAPIActions([
   {
     type: 'GET_USER_PROFILE',
     relativeUrl: '/v2/users/:id',
+    method: 'GET',
     saveResponseTo: 'profile'
   }
 ])
@@ -78,9 +79,8 @@ acción que haremos, de la siguiente forma :
 import APIClient from 'laboratoria-apiclient';
 
 const mapDispatchToProps = (dispatch) => {
-  getProfile : (userId) => APIClient.getAPIActions().getApiCall(dispatch)(
-    APIClient.getAPIActionTypes()
-      .find(apiCall => apiCall.type === 'GET_USER_PROFILE'),
+  getProfile : (userId) => APIClient.doAPICall(dispatch)(
+    'GET_USER_PROFILE',
     {
       userId
     }
