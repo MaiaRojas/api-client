@@ -1,6 +1,6 @@
 {
   "name": "laboratoria-apiclient",
-  "version": "1.0.6",
+  "version": "1.0.11",
   "description": "This project helps you link any react app to our api.laboratoria.la",
   "main": "index.js",
   "scripts": {
