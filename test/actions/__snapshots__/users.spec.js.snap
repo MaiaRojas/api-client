@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`userCohorts should create an appropriate action from input params 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "user/undefined/cohorts",
+    "namespace": "default",
+    "suffix": "USER_COHORTS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/undefined/cohorts",
+  },
+  "type": "@@api-client/API_REQUEST/USER_COHORTS",
+}
+`;

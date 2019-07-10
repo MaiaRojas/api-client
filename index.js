@@ -1,6 +1,9 @@
-import APIClient from './lib/APIClient';
-import action from './lib/actions';
+import middleware from './lib/middleware';
+import reducer from './lib/reducer';
 
-APIClient.doAPICall = action;
+export {
+  middleware,
+  reducer,
+};
 
-export default APIClient;
+export * from './lib/actions';
