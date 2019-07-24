@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`partsSearch should create an appropriate action from input params 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "search",
+    "namespace": "default",
+    "suffix": "TOPIC_SEARCH",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": Object {
+      "q": "something",
+    },
+    "url": "/topics/_search",
+  },
+  "type": "@@api-client/API_REQUEST/TOPIC_SEARCH",
+}
+`;

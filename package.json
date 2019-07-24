@@ -1,42 +1,41 @@
 {
-  "name": "laboratoria-apiclient",
-  "version": "1.0.11",
-  "description": "This project helps you link any react app to our api.laboratoria.la",
+  "name": "api-client",
+  "version": "1.1.0",
+  "description": "Laboratoria API client made for redux apps",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "pretest": "eslint .",
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Laboratoria/APIClient.git"
+    "url": "git+https://github.com/Laboratoria/api-client.git"
   },
   "keywords": [
-    "APIClient",
     "api",
+    "client",
     "laboratoria",
     "redux"
   ],
-  "author": "Laboratoria",
+  "author": "Laboratoria <sumate@laboratoria.la> (http://laboratoria.la/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Laboratoria/APIClient/issues"
+    "url": "https://github.com/Laboratoria/api-client/issues"
   },
-  "homepage": "https://github.com/Laboratoria/APIClient#readme",
+  "homepage": "https://github.com/Laboratoria/api-client#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "jest-mock-axios": "^3.0.0"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0"
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0"
   },
   "babel": {
     "presets": [
@@ -48,10 +47,6 @@
           }
         }
       ]
-    ],
-    "plugins":[
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-object-rest-spread"
     ]
   }
 }

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`laboratoriaAPIAction should create an appropriate action from input params 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": true,
+    "expiration": 0,
+    "key": "example",
+    "namespace": "test",
+    "suffix": "EXAMPLE_REQUEST",
+  },
+  "payload": Object {
+    "data": Object {
+      "test": "data",
+    },
+    "headers": undefined,
+    "method": "GET",
+    "params": Object {
+      "test": "param",
+    },
+    "url": "http://example.com",
+  },
+  "type": "@@api-client/API_REQUEST/EXAMPLE_REQUEST",
+}
+`;
