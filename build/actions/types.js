@@ -1,0 +1,13 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.API_REQUEST_FAILURE = exports.API_REQUEST_SUCCESS = exports.API_REQUEST = void 0;
+const ACTION_PREFIX = '@@api-client';
+const API_REQUEST = `${ACTION_PREFIX}/API_REQUEST/`;
+exports.API_REQUEST = API_REQUEST;
+const API_REQUEST_SUCCESS = `${ACTION_PREFIX}/API_REQUEST_SUCCESS/`;
+exports.API_REQUEST_SUCCESS = API_REQUEST_SUCCESS;
+const API_REQUEST_FAILURE = `${ACTION_PREFIX}/API_REQUEST_FAILURE/`;
+exports.API_REQUEST_FAILURE = API_REQUEST_FAILURE;
