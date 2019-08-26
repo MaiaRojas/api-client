@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addComment should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-comment-add",
+    "namespace": "default",
+    "suffix": "PROFILE_COMMENT_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "cohortProject": "cohortProjectId",
+      "text": "text",
+      "type": "type",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/users/someone/profile/comments",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_COMMENT_ADD",
+}
+`;
+
+exports[`deleteComment should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-comment-delete",
+    "namespace": "default",
+    "suffix": "PROFILE_COMMENT_DELETE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "DELETE",
+    "params": undefined,
+    "url": "/users/someone/profile/comments/commentId",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_COMMENT_DELETE",
+}
+`;
+
+exports[`getComments should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "user/someone/profile/comments",
+    "namespace": "default",
+    "suffix": "PROFILE_COMMENTS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/profile/comments",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_COMMENTS",
+}
+`;
+
+exports[`updateComment should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-comment-update",
+    "namespace": "default",
+    "suffix": "PROFILE_COMMENT_UPDATE",
+  },
+  "payload": Object {
+    "data": Object {
+      "text": "text",
+    },
+    "headers": undefined,
+    "method": "PUT",
+    "params": undefined,
+    "url": "/users/someone/profile/comments/commentId",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_COMMENT_UPDATE",
+}
+`;
