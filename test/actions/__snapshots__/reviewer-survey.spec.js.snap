@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getLastestVersion should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "reviewer-survey/latest",
+    "namespace": "default",
+    "suffix": "REVIEWER_SURVEY_LATEST_VERSION",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/reviewer-survey",
+  },
+  "type": "@@api-client/API_REQUEST/REVIEWER_SURVEY_LATEST_VERSION",
+}
+`;
+
+exports[`getReviewerSurvey should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "reviewer-survey",
+    "namespace": "default",
+    "suffix": "REVIEWER_SURVEY",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/reviewer-survey/something",
+  },
+  "type": "@@api-client/API_REQUEST/REVIEWER_SURVEY",
+}
+`;
