@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addProjectFeedback should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-feedback-add",
+    "namespace": "default",
+    "suffix": "PROJECT_FEEDBACK_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_ADD",
+}
+`;
+
+exports[`deleteProjectFeedback should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-feedback-delete",
+    "namespace": "default",
+    "suffix": "PROJECT_FEEDBACK_DELETE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "DELETE",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_DELETE",
+}
+`;
+
+exports[`getProjectFeedback should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "user/someone/feedback",
+    "namespace": "default",
+    "suffix": "PROJECT_FEEDBACK",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK",
+}
+`;
+
+exports[`updateProjectFeedback should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-feedback-update",
+    "namespace": "default",
+    "suffix": "PROJECT_FEEDBACK_UPDATE",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "PUT",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_UPDATE",
+}
+`;
