@@ -223,7 +223,7 @@ describe('middleware', () => {
     }));
   });
 
-  it('should dispatch a proper failure action for an anonymous GET request', async () => {
+  it('should dispatch a proper failure action an authenticated GET request', async () => {
     const { store, invoke } = createStubs({
       middleware: middleware({
         baseURL: 'http://example.com',
