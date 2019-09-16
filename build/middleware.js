@@ -91,10 +91,12 @@ var _default = ({
     meta: { ...action.meta,
       responseAt: new Date().toISOString()
     }
-  })).catch(result => dispatch({
+  })).catch(({
+    response: result
+  }) => dispatch({
     store,
     type: `${_types.API_REQUEST_FAILURE}${action.meta.suffix}`,
-    result,
+    result: result.response || result,
     meta: action.meta
   }));
   return next(action);
