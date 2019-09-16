@@ -6,7 +6,8 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest --verbose --coverage",
-    "build": "babel lib --out-dir build"
+    "build": "babel lib --out-dir build",
+    "changelog": "git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=\"%h %s (%an <%ae>)\""
   },
   "repository": {
     "type": "git",
