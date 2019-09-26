@@ -1,8 +1,9 @@
 import {
-  getProjectFeedback,
   addProjectFeedback,
-  updateProjectFeedback,
   deleteProjectFeedback,
+  getProjectFeedback,
+  sendProjectFeedback,
+  updateProjectFeedback,
 } from '../../lib/actions/feedback';
 
 describe('getProjectFeedback', () => {
@@ -10,7 +11,7 @@ describe('getProjectFeedback', () => {
     expect(typeof getProjectFeedback).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an appropriate action', () => {
     expect(getProjectFeedback({
       user: 'someone',
       cohortId: 'someone',
@@ -24,7 +25,7 @@ describe('addProjectFeedback', () => {
     expect(typeof addProjectFeedback).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an appropriate action', () => {
     expect(addProjectFeedback({
       user: 'someone',
       cohortId: 'someone',
@@ -39,7 +40,7 @@ describe('updateProjectFeedback', () => {
     expect(typeof updateProjectFeedback).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an appropriate action', () => {
     expect(updateProjectFeedback({
       user: 'someone',
       cohortId: 'someone',
@@ -54,8 +55,22 @@ describe('deleteProjectFeedback', () => {
     expect(typeof deleteProjectFeedback).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an appropriate action', () => {
     expect(deleteProjectFeedback({
+      user: 'someone',
+      cohortId: 'someone',
+      projectId: 'someone',
+    })).toMatchSnapshot();
+  });
+});
+
+describe('sendProjectFeedback', () => {
+  it('should be a function', () => {
+    expect(typeof sendProjectFeedback).toBe('function');
+  });
+
+  it('should create an appropriate action', () => {
+    expect(sendProjectFeedback({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
