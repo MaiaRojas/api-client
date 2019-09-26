@@ -62,6 +62,26 @@ Object {
 }
 `;
 
+exports[`sendProjectFeedback should create an appropiate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-feedback-send",
+    "namespace": "default",
+    "suffix": "PROJECT_FEEDBACK_SEND",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/_send",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_SEND",
+}
+`;
+
 exports[`updateProjectFeedback should create an appropiate action 1`] = `
 Object {
   "meta": Object {
