@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deleteProjectFeedback = exports.updateProjectFeedback = exports.addProjectFeedback = exports.getProjectFeedback = void 0;
+exports.sendProjectFeedback = exports.deleteProjectFeedback = exports.updateProjectFeedback = exports.addProjectFeedback = exports.getProjectFeedback = void 0;
 
 var _helpers = require("../helpers");
 
@@ -70,3 +70,18 @@ const deleteProjectFeedback = ({
 });
 
 exports.deleteProjectFeedback = deleteProjectFeedback;
+
+const sendProjectFeedback = ({
+  user,
+  cohortId,
+  projectId,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'PROJECT_FEEDBACK_SEND',
+  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback/_send`,
+  method: 'POST',
+  key: 'project-feedback-send',
+  ...rest
+});
+
+exports.sendProjectFeedback = sendProjectFeedback;
