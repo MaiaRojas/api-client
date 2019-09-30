@@ -19,3 +19,23 @@ Object {
   "type": "@@api-client/API_REQUEST/USER_COHORTS",
 }
 `;
+
+exports[`userFeed should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 60000,
+    "key": "user/someone/feed",
+    "namespace": "default",
+    "suffix": "USER_FEED",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/feed",
+  },
+  "type": "@@api-client/API_REQUEST/USER_FEED",
+}
+`;
