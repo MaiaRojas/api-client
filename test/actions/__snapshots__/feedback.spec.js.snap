@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`addProjectFeedback should create an appropiate action 1`] = `
+exports[`addProjectFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`deleteProjectFeedback should create an appropiate action 1`] = `
+exports[`deleteProjectFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -42,7 +42,7 @@ Object {
 }
 `;
 
-exports[`getProjectFeedback should create an appropiate action 1`] = `
+exports[`getProjectFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -62,7 +62,7 @@ Object {
 }
 `;
 
-exports[`sendProjectFeedback should create an appropiate action 1`] = `
+exports[`sendProjectFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -82,7 +82,7 @@ Object {
 }
 `;
 
-exports[`updateProjectFeedback should create an appropiate action 1`] = `
+exports[`updateProjectFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
