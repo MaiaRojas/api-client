@@ -200,7 +200,7 @@ describe('middleware', () => {
       anonymous: true,
     }));
     mockAxios.mockError(
-      { data: 'test result', status: 500 },
+      { response: { data: 'test result', status: 500 } },
     );
 
     expect(mockAxios).toHaveBeenCalledWith(expect.objectContaining({
@@ -238,7 +238,7 @@ describe('middleware', () => {
       anonymous: false,
     }));
     mockAxios.mockError(
-      { data: 'test result', status: 500 },
+      { response: { data: 'test result', status: 500 } },
     );
 
     expect(mockAxios).toHaveBeenCalledWith(expect.objectContaining({
