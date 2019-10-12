@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCohorts should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 3600000,
+    "key": "cohorts",
+    "namespace": "default",
+    "suffix": "COHORTS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": Object {
+      "campus": undefined,
+      "limit": 100,
+      "page": 1,
+      "program": undefined,
+      "track": undefined,
+    },
+    "url": "/cohorts",
+  },
+  "type": "@@api-client/API_REQUEST/COHORTS",
+}
+`;
