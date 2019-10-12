@@ -49,11 +49,12 @@ describe('middleware', () => {
   });
 
   it('should provide a previous result given an action dispatched with an appropriate expiration time', () => {
+    const responseAt = new Date();
     const state = {
       api: {
         test: {
           response: 'test result',
-          __meta: { responseAt: (new Date()).toISOString() },
+          __meta: { responseAt },
         },
       },
     };
@@ -72,7 +73,7 @@ describe('middleware', () => {
     expect(store.dispatch).toHaveBeenCalledWith({
       type: `${API_REQUEST_SUCCESS}${action.meta.suffix}`,
       payload: state.api.test.response,
-      meta: action.meta,
+      meta: { ...action.meta, responseAt },
     });
     expect(mockAxios).not.toHaveBeenCalled();
   });
