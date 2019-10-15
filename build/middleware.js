@@ -60,7 +60,9 @@ var _default = ({
     return store.dispatch({
       type: `${_types.API_REQUEST_SUCCESS}${action.meta.suffix}`,
       payload: previousStateValue.response,
-      meta: action.meta
+      meta: { ...action.meta,
+        responseAt
+      }
     });
   }
 
