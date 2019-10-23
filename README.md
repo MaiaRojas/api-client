@@ -148,12 +148,114 @@ An action creator that will appropriately shape an action ready to be processed 
 
 ## Action Creators
 
-### Users
-#### `userCohorts({ user, ...rest })`
-Get cohorts for a user.
+### Campuses
+#### `getCampuses({ ...rest })`
+Get campuses list.
 
 ##### Params
-- `user`: User ID or email to search cohorts after.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Cohorts
+#### `getCohorts({ campus, program, track, page, limit, ...rest })`
+Get cohorts list, optionally filtered by campus, program and track.
+
+##### Params
+- `campus`: Campus the list of cohorts will be filtered with. Optional.
+- `program`: Program the list of cohorts will be filtered with. Optional.
+- `track`: Track the list of cohorts will be filtered with. Optional.
+- `page`: Page number to retrieve results from. Defaults to 1.
+- `limit`: Number of elements to retrieve per page. Defaults to 100.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Feedback
+#### `addProjectFeedback({ user, cohortId, projectId, data, ...rest })`
+Add feedback for a user's cohort project.
+
+##### Params
+- `user`: User ID or email whose feedback will be created for.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback will be created for.
+- `data`: Feedback data contents.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `deleteProjectFeedback({ user, cohortId, projectId, ...rest })`
+Delete a user's cohort project feedback.
+
+##### Params
+- `user`: User ID or email whose feedback will be deleted from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback will be deleted from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getProjectFeedback({ user, cohortId, projectId, ...rest })`
+Get a user's cohort project feedback.
+
+##### Params
+- `user`: User ID or email whose feedback will be retrieved from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback will be retrieved from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `sendProjectFeedback({ user, cohortId, projectId, ...rest })`
+Send a user's project feedback notification email.
+
+##### Params
+- `user`: User ID or email whose feedback the notification will be sent.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback is part of.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `updateProjectFeedback({ user, cohortId, projectId, data, ...rest })`
+Update a user's cohort project feedback.
+
+##### Params
+- `user`: User ID or email whose feedback will be updated.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback is part of.
+- `data`: Project feedback data to be updated.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Profile
+#### `addComment({ user, comment, ...rest })`
+Add a comment to a user's academic profile.
+
+##### Params
+- `user`: User ID or email whose profile the comment will be added to.
+- `comment`: Comment text content.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `deleteComment({ user, commentId, ...rest })`
+Delete a user's profile comment.
+
+##### Params
+- `user`: User ID or email whose profile the comment will be deleted from.
+- `commentId`: Comment ID.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getComments({ user, ...rest })`
+Get a user's profile comments.
+
+##### Params
+- `user`: User ID or email whose profile the comment will be retrieved from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `updateComment({ user, comment: { id, ...data }, ...rest })`
+Update a user's profile comment.
+
+##### Params
+- `user`: User ID or email whose profile the comment will be updated from.
+- `comment`: Object representing the comment to update. Must contain an `id` property.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Reviewer Survey
+#### `getLastestVersion()`
+Get the latest reviewer survey version.
+
+#### `getReviewerSurvey({ version, ...rest })`
+Get a specific reviewer survey.
+
+##### Params
+- `version`: Reviewer survey version to get.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
 ### Search
@@ -162,4 +264,19 @@ Get parts matching a search query.
 
 ##### Params
 - `query`: Search term.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Users
+#### `userCohorts({ user, ...rest })`
+Get cohorts for a user.
+
+##### Params
+- `user`: User ID or email to search cohorts after.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `userFeed({ user, ...rest })`
+Get user events feed.
+
+##### Params
+- `user`: User ID or email to get the feed from.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
