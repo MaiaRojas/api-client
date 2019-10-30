@@ -39,3 +39,23 @@ Object {
   "type": "@@api-client/API_REQUEST/USER_FEED",
 }
 `;
+
+exports[`userProfile should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "user/someone/profile",
+    "namespace": "default",
+    "suffix": "USER_PROFILE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/profile",
+  },
+  "type": "@@api-client/API_REQUEST/USER_PROFILE",
+}
+`;
