@@ -1,4 +1,4 @@
-import { userCohorts, userFeed } from '../../lib/actions/users';
+import { userCohorts, userFeed, userProfile } from '../../lib/actions/users';
 
 describe('userCohorts', () => {
   it('should be a function', () => {
@@ -17,5 +17,15 @@ describe('userFeed', () => {
 
   it('should create an appropriate action', () => {
     expect(userFeed({ user: 'someone' })).toMatchSnapshot();
+  });
+});
+
+describe('userProfile', () => {
+  it('should be a function', () => {
+    expect(typeof userProfile).toBe('function');
+  });
+
+  it('should create an appropriate action', () => {
+    expect(userProfile({ user: 'someone' })).toMatchSnapshot();
   });
 });
