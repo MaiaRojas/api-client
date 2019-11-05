@@ -280,3 +280,10 @@ Get user events feed.
 ##### Params
 - `user`: User ID or email to get the feed from.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `userProfile({ user, ...rest })`
+Get user's academic profile.
+
+##### Params
+- `user`: User ID or email to get the academic profile from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
