@@ -1,6 +1,6 @@
 {
   "name": "api-client",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Laboratoria API client made for redux apps",
   "main": "build/index.js",
   "scripts": {
