@@ -167,6 +167,13 @@ Get cohorts list, optionally filtered by campus, program and track.
 - `limit`: Number of elements to retrieve per page. Defaults to 100.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
+#### `getCohortUsers({ cohort, ...rest })`
+Returns the list of users from a cohort.
+
+##### Params
+- `cohort`: Cohort slug used to obtain the users that belong to that cohort..
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 ### Feedback
 #### `addProjectFeedback({ user, cohortId, projectId, data, ...rest })`
 Add feedback for a user's cohort project.
