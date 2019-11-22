@@ -1,11 +1,11 @@
 import { getCampuses } from '../../lib/actions/campuses';
 
-describe('getCohorts', () => {
+describe('getCampuses', () => {
   it('should be a function', () => {
     expect(typeof getCampuses).toBe('function');
   });
 
-  it('should create an appropriate action', () => {
+  it('should create an action', () => {
     expect(getCampuses()).toMatchSnapshot();
   });
 });
