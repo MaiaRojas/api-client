@@ -1,6 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getCohortUsers should create an appropriate action 1`] = `
+exports[`addCohortProject should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "cohort-project-add",
+    "namespace": "default",
+    "suffix": "COHORT_PROJECT_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "id": "projectId",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/cohorts/someone/projects",
+  },
+  "type": "@@api-client/API_REQUEST/COHORT_PROJECT_ADD",
+}
+`;
+
+exports[`getCohortProjects should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "cohorts/someone/projects",
+    "namespace": "default",
+    "suffix": "COHORT_PROJECTS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/cohorts/someone/projects",
+  },
+  "type": "@@api-client/API_REQUEST/COHORT_PROJECTS",
+}
+`;
+
+exports[`getCohortUsers should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -20,7 +62,7 @@ Object {
 }
 `;
 
-exports[`getCohorts should create an appropriate action 1`] = `
+exports[`getCohorts should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
