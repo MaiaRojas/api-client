@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getCohorts should create an appropriate action 1`] = `
+exports[`getCampuses should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
