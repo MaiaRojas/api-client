@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`addComment should create an appropiate action 1`] = `
+exports[`addComment should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -24,7 +24,7 @@ Object {
 }
 `;
 
-exports[`deleteComment should create an appropiate action 1`] = `
+exports[`deleteComment should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -44,7 +44,7 @@ Object {
 }
 `;
 
-exports[`getComments should create an appropiate action 1`] = `
+exports[`getComments should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
@@ -64,7 +64,7 @@ Object {
 }
 `;
 
-exports[`updateComment should create an appropiate action 1`] = `
+exports[`updateComment should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
