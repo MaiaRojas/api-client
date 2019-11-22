@@ -174,6 +174,21 @@ Returns the list of users from a cohort.
 - `cohort`: Cohort slug used to obtain the users that belong to that cohort..
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
+#### `getCohortProjects({ cohort, ...rest })`
+Returns the list of projects added to a cohort.
+
+##### Params
+- `cohort`: Cohort slug used to obtain the projects that belong to that cohort.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `addCohortProject({ cohort, project, ...rest })`
+Add project for a cohort.
+
+##### Params
+- `cohort`: Cohort slug used to identify the cohort where the project will be added to.
+- `project`: Identifier of the project to be added.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 ### Feedback
 #### `addProjectFeedback({ user, cohortId, projectId, data, ...rest })`
 Add feedback for a user's cohort project.
@@ -252,6 +267,13 @@ Update a user's profile comment.
 ##### Params
 - `user`: User ID or email whose profile the comment will be updated from.
 - `comment`: Object representing the comment to update. Must contain an `id` property.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+### Campuses
+#### `getCampuses({ ...rest })`
+Get projects list.
+
+##### Params
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
 ### Reviewer Survey
