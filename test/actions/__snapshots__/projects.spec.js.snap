@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getProjects should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 3600000,
+    "key": "projects",
+    "namespace": "default",
+    "suffix": "PROJECTS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/projects",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECTS",
+}
+`;
