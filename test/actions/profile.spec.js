@@ -10,7 +10,7 @@ describe('getComments', () => {
     expect(typeof getComments).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an action', () => {
     expect(getComments({ user: 'someone' })).toMatchSnapshot();
   });
 });
@@ -20,7 +20,7 @@ describe('addComment', () => {
     expect(typeof addComment).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an action', () => {
     expect(addComment({
       user: 'someone',
       comment: {
@@ -37,7 +37,7 @@ describe('updateComment', () => {
     expect(typeof updateComment).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an action', () => {
     expect(updateComment({
       user: 'someone',
       comment: {
@@ -53,7 +53,7 @@ describe('deleteComment', () => {
     expect(typeof deleteComment).toBe('function');
   });
 
-  it('should create an appropiate action', () => {
+  it('should create an action', () => {
     expect(deleteComment({
       user: 'someone',
       commentId: 'commentId',
