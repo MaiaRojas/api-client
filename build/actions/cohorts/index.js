@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getCohortUsers = exports.getCohorts = void 0;
+exports.addCohortProject = exports.getCohortProjects = exports.getCohortUsers = exports.getCohorts = void 0;
 
 var _helpers = require("../helpers");
 
@@ -45,3 +45,32 @@ const getCohortUsers = ({
 });
 
 exports.getCohortUsers = getCohortUsers;
+
+const getCohortProjects = ({
+  cohort,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'COHORT_PROJECTS',
+  url: `/cohorts/${cohort}/projects`,
+  method: 'GET',
+  key: `cohorts/${cohort}/projects`,
+  expiration: 1000 * 60 * 5,
+  ...rest
+});
+
+exports.getCohortProjects = getCohortProjects;
+
+const addCohortProject = ({
+  cohort,
+  project,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'COHORT_PROJECT_ADD',
+  url: `/cohorts/${cohort}/projects`,
+  method: 'POST',
+  data: project,
+  key: 'cohort-project-add',
+  ...rest
+});
+
+exports.addCohortProject = addCohortProject;
