@@ -24,6 +24,29 @@ Object {
 }
 `;
 
+exports[`addProfileTag should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-tag-add",
+    "namespace": "default",
+    "suffix": "PROFILE_TAG_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "assignmentReason": "a comment",
+      "tag": "tagId",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/users/someone/profile/tags",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_TAG_ADD",
+}
+`;
+
 exports[`deleteComment should create an action 1`] = `
 Object {
   "meta": Object {

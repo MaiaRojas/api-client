@@ -4,6 +4,7 @@ import {
   updateComment,
   deleteComment,
   getProfileTags,
+  addProfileTag,
 } from '../../lib/actions/profile';
 
 describe('getComments', () => {
@@ -69,5 +70,21 @@ describe('getProfileTags', () => {
 
   it('should create an action', () => {
     expect(getProfileTags({ user: 'someone' })).toMatchSnapshot();
+  });
+});
+
+describe('addProfileTag', () => {
+  it('should be a function', () => {
+    expect(typeof addProfileTag).toBe('function');
+  });
+
+  it('should create an action', () => {
+    expect(addProfileTag({
+      user: 'someone',
+      data: {
+        assignmentReason: 'a comment',
+        tag: 'tagId',
+      },
+    })).toMatchSnapshot();
   });
 });
