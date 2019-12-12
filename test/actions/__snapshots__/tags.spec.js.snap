@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTags should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "tags",
+    "namespace": "default",
+    "suffix": "TAGS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/tags",
+  },
+  "type": "@@api-client/API_REQUEST/TAGS",
+}
+`;
