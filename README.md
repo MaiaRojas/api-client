@@ -301,14 +301,6 @@ Update a user's profile tag.
 - `data`: AcademicProfileTag content.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
-### Campuses
-#### `getCampuses({ ...rest })`
-Get projects list.
-
-##### Params
-- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
-
-
 ### Reviewer Survey
 #### `getLastestVersion()`
 Get the latest reviewer survey version.
