@@ -128,3 +128,25 @@ Object {
   "type": "@@api-client/API_REQUEST/PROFILE_COMMENT_UPDATE",
 }
 `;
+
+exports[`updateProfileTag should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-tag-update",
+    "namespace": "default",
+    "suffix": "PROFILE_TAG_UPDATE",
+  },
+  "payload": Object {
+    "data": Object {
+      "removalReasson": "a comment",
+    },
+    "headers": undefined,
+    "method": "PUT",
+    "params": undefined,
+    "url": "/users/someone/profile/tags/tagId",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_TAG_UPDATE",
+}
+`;
