@@ -64,6 +64,26 @@ Object {
 }
 `;
 
+exports[`getProfileTags should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "user/someone/profile/tags",
+    "namespace": "default",
+    "suffix": "PROFILE_TAGS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/profile/tags",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_TAGS",
+}
+`;
+
 exports[`updateComment should create an action 1`] = `
 Object {
   "meta": Object {

@@ -3,6 +3,7 @@ import {
   addComment,
   updateComment,
   deleteComment,
+  getProfileTags,
 } from '../../lib/actions/profile';
 
 describe('getComments', () => {
@@ -58,5 +59,15 @@ describe('deleteComment', () => {
       user: 'someone',
       commentId: 'commentId',
     })).toMatchSnapshot();
+  });
+});
+
+describe('getProfileTags', () => {
+  it('should be a function', () => {
+    expect(typeof getProfileTags).toBe('function');
+  });
+
+  it('should create an action', () => {
+    expect(getProfileTags({ user: 'someone' })).toMatchSnapshot();
   });
 });
