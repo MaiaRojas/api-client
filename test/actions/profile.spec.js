@@ -6,6 +6,7 @@ import {
   getProfileTags,
   addProfileTag,
   updateProfileTag,
+  deleteProfileTag,
 } from '../../lib/actions/profile';
 
 describe('getComments', () => {
@@ -102,6 +103,19 @@ describe('updateProfileTag', () => {
       data: {
         removalReasson: 'a comment',
       },
+    })).toMatchSnapshot();
+  });
+});
+
+describe('deleteProfileTag', () => {
+  it('should be a function', () => {
+    expect(typeof deleteProfileTag).toBe('function');
+  });
+
+  it('should create an action', () => {
+    expect(deleteProfileTag({
+      user: 'someone',
+      tagId: 'tagId',
     })).toMatchSnapshot();
   });
 });

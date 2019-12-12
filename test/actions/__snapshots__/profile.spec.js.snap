@@ -67,6 +67,26 @@ Object {
 }
 `;
 
+exports[`deleteProfileTag should create an action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "profile-tag-delete",
+    "namespace": "default",
+    "suffix": "PROFILE_TAG_DELETE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "DELETE",
+    "params": undefined,
+    "url": "/users/someone/profile/tags/tagId",
+  },
+  "type": "@@api-client/API_REQUEST/PROFILE_TAG_DELETE",
+}
+`;
+
 exports[`getComments should create an action 1`] = `
 Object {
   "meta": Object {
