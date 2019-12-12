@@ -320,6 +320,13 @@ Get parts matching a search query.
 - `query`: Search term.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
+### Tags
+#### `getTags()`
+Get tags list.
+
+##### Params
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 ### Users
 #### `userCohorts({ user, ...rest })`
 Get cohorts for a user.
