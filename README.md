@@ -269,12 +269,45 @@ Update a user's profile comment.
 - `comment`: Object representing the comment to update. Must contain an `id` property.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
+#### `addProfileTag({ user, tag, ...rest })`
+Add a tag to a user's academic profile.
+
+##### Params
+- `user`: User ID or email whose profile the tag will be added to.
+- `data`: AcademicProfileTag content.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `deleteProfileTag({ user, tagId, ...rest })`
+Delete a user's profile tag.
+
+##### Params
+- `user`: User ID or email whose profile the tag will be deleted from.
+- `tagId`: AcademicProfileTag ID.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getProfileTags({ user, ...rest })`
+Get a user's profile tags.
+
+##### Params
+- `user`: User ID or email whose profile the tag will be retrieved from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `updateProfileTag({ user, tag: { id, ...data }, ...rest })`
+Update a user's profile tag.
+
+##### Params
+- `user`: User ID or email whose profile the tag will be updated from.
+- `tagId`: AcademicProfileTag ID.
+- `data`: AcademicProfileTag content.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 ### Campuses
 #### `getCampuses({ ...rest })`
 Get projects list.
 
 ##### Params
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 
 ### Reviewer Survey
 #### `getLastestVersion()`
