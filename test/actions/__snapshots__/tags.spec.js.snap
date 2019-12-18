@@ -4,7 +4,7 @@ exports[`getTags should create an action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
-    "expiration": undefined,
+    "expiration": 3600000,
     "key": "tags",
     "namespace": "default",
     "suffix": "TAGS",
