@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.deleteComment = exports.updateComment = exports.addComment = exports.getComments = void 0;
+exports.deleteProfileTag = exports.updateProfileTag = exports.addProfileTag = exports.getProfileTags = exports.deleteComment = exports.updateComment = exports.addComment = exports.getComments = void 0;
 
 var _helpers = require("../helpers");
 
@@ -67,3 +67,62 @@ const deleteComment = ({
 });
 
 exports.deleteComment = deleteComment;
+
+const getProfileTags = ({
+  user,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'PROFILE_TAGS',
+  url: `/users/${user}/profile/tags`,
+  method: 'GET',
+  key: `user/${user}/profile/tags`,
+  expiration: 1000 * 60 * 5,
+  ...rest
+});
+
+exports.getProfileTags = getProfileTags;
+
+const addProfileTag = ({
+  user,
+  data,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'PROFILE_TAG_ADD',
+  url: `/users/${user}/profile/tags`,
+  method: 'POST',
+  data,
+  key: 'profile-tag-add',
+  ...rest
+});
+
+exports.addProfileTag = addProfileTag;
+
+const updateProfileTag = ({
+  user,
+  tagId,
+  data,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'PROFILE_TAG_UPDATE',
+  url: `/users/${user}/profile/tags/${tagId}`,
+  method: 'PUT',
+  data,
+  key: 'profile-tag-update',
+  ...rest
+});
+
+exports.updateProfileTag = updateProfileTag;
+
+const deleteProfileTag = ({
+  user,
+  tagId,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'PROFILE_TAG_DELETE',
+  url: `/users/${user}/profile/tags/${tagId}`,
+  method: 'DELETE',
+  key: 'profile-tag-delete',
+  ...rest
+});
+
+exports.deleteProfileTag = deleteProfileTag;
