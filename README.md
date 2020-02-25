@@ -190,26 +190,28 @@ Add project for a cohort.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
 ### Feedback
-#### `addProjectFeedback({ user, cohortId, projectId, data, ...rest })`
+#### `addFeedback({ user, cohortId, projectId, slug, data, ...rest })`
 Add feedback for a user's cohort project.
 
 ##### Params
 - `user`: User ID or email whose feedback will be created for.
 - `cohortId`: User's cohort ID the project is part of.
 - `projectId`: Cohort project ID the feedback will be created for.
+- `slug`: Slug the feedback is part of.
 - `data`: Feedback data contents.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
-#### `deleteProjectFeedback({ user, cohortId, projectId, ...rest })`
+#### `deleteFeedback({ user, cohortId, projectId, slug, ...rest })`
 Delete a user's cohort project feedback.
 
 ##### Params
 - `user`: User ID or email whose feedback will be deleted from.
 - `cohortId`: User's cohort ID the project is part of.
 - `projectId`: Cohort project ID the feedback will be deleted from.
+- `slug`: Slug the feedback is part of.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
-#### `getProjectFeedback({ user, cohortId, projectId, ...rest })`
+#### `getFeedback({ user, cohortId, projectId, ...rest })`
 Get a user's cohort project feedback.
 
 ##### Params
@@ -218,22 +220,34 @@ Get a user's cohort project feedback.
 - `projectId`: Cohort project ID the feedback will be retrieved from.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
-#### `sendProjectFeedback({ user, cohortId, projectId, ...rest })`
+#### `getFeedbackBySlug({ user, cohortId, projectId, slug, ...rest })`
+Get a user's cohort project feedback.
+
+##### Params
+- `user`: User ID or email whose feedback will be retrieved from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the feedback will be retrieved from.
+- `slug`: Slug the feedback is part of.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `sendFeedback({ user, cohortId, projectId, slug, ...rest })`
 Send a user's project feedback notification email.
 
 ##### Params
 - `user`: User ID or email whose feedback the notification will be sent.
 - `cohortId`: User's cohort ID the project is part of.
 - `projectId`: Cohort project ID the feedback is part of.
+- `slug`: Slug the feedback is part of.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
-#### `updateProjectFeedback({ user, cohortId, projectId, data, ...rest })`
+#### `updateFeedback({ user, cohortId, projectId, slug, data, ...rest })`
 Update a user's cohort project feedback.
 
 ##### Params
 - `user`: User ID or email whose feedback will be updated.
 - `cohortId`: User's cohort ID the project is part of.
 - `projectId`: Cohort project ID the feedback is part of.
+- `slug`: Slug the feedback is part of.
 - `data`: Project feedback data to be updated.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
@@ -301,15 +315,63 @@ Update a user's profile tag.
 - `data`: AcademicProfileTag content.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
+### ProgressProject
+#### `addProgressProject({ user, cohortId, projectId, data, ...rest })`
+Add ProgressProject for a user's cohort project.
+
+##### Params
+- `user`: User ID or email whose ProgressProject will be created for.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the ProgressProject will be created for.
+- `data`: ProgressProject data contents.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `deleteProgressProject({ user, cohortId, projectId, ...rest })`
+Delete a user's cohort project ProgressProject.
+
+##### Params
+- `user`: User ID or email whose ProgressProject will be deleted from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the ProgressProject will be deleted from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getProgressProject({ user, cohortId, projectId, ...rest })`
+Get a user's cohort project ProgressProject.
+
+##### Params
+- `user`: User ID or email whose ProgressProject will be retrieved from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the ProgressProject will be retrieved from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getProgressProject({ user, cohortId, projectId, ...rest })`
+Get a user's cohort project ProgressProject.
+
+##### Params
+- `user`: User ID or email whose ProgressProject will be retrieved from.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the ProgressProject will be retrieved from.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `updateProgressProject({ user, cohortId, projectId, data, ...rest })`
+Update a user's cohort project ProgressProject.
+
+##### Params
+- `user`: User ID or email whose ProgressProject will be updated.
+- `cohortId`: User's cohort ID the project is part of.
+- `projectId`: Cohort project ID the ProgressProject is part of.
+- `data`: Project ProgressProject data to be updated.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
 ### Reviewer Survey
 #### `getLastestVersion()`
 Get the latest reviewer survey version.
 
-#### `getReviewerSurvey({ version, ...rest })`
+#### `getReviewerSurvey({ slug, ...rest })`
 Get a specific reviewer survey.
 
 ##### Params
-- `version`: Reviewer survey version to get.
+- `slug`: Reviewer survey slug to get.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
 
 ### Search
