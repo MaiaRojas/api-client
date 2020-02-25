@@ -16,6 +16,6 @@ describe('getReviewerSurvey', () => {
   });
 
   it('should create an appropriate action', () => {
-    expect(getReviewerSurvey({ version: 'something' })).toMatchSnapshot();
+    expect(getReviewerSurvey({ slug: 'something' })).toMatchSnapshot();
   });
 });

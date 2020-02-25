@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addProgressProject should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "progress-project-add",
+    "namespace": "default",
+    "suffix": "PROGRESS_PROJECT_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROGRESS_PROJECT_ADD",
+}
+`;
+
+exports[`deleteProgressProject should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "progress-project-delete",
+    "namespace": "default",
+    "suffix": "PROGRESS_PROJECT_DELETE",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "DELETE",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROGRESS_PROJECT_DELETE",
+}
+`;
+
+exports[`getProgressProject should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "user/someone/progress",
+    "namespace": "default",
+    "suffix": "PROGRESS_PROJECT",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROGRESS_PROJECT",
+}
+`;
+
+exports[`updateProgressProject should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "progress-project-update",
+    "namespace": "default",
+    "suffix": "PROGRESS_PROJECT_UPDATE",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "PUT",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROGRESS_PROJECT_UPDATE",
+}
+`;

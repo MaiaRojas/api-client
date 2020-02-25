@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`addProjectFeedback should create an appropriate action 1`] = `
+exports[`addFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "project-feedback-add",
+    "key": "feedback-add",
     "namespace": "default",
-    "suffix": "PROJECT_FEEDBACK_ADD",
+    "suffix": "FEEDBACK_ADD",
   },
   "payload": Object {
     "data": Object {
@@ -16,40 +16,40 @@ Object {
     "headers": undefined,
     "method": "POST",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
   },
-  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_ADD",
+  "type": "@@api-client/API_REQUEST/FEEDBACK_ADD",
 }
 `;
 
-exports[`deleteProjectFeedback should create an appropriate action 1`] = `
+exports[`deleteFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "project-feedback-delete",
+    "key": "feedback-delete",
     "namespace": "default",
-    "suffix": "PROJECT_FEEDBACK_DELETE",
+    "suffix": "FEEDBACK_DELETE",
   },
   "payload": Object {
     "data": undefined,
     "headers": undefined,
     "method": "DELETE",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
   },
-  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_DELETE",
+  "type": "@@api-client/API_REQUEST/FEEDBACK_DELETE",
 }
 `;
 
-exports[`getProjectFeedback should create an appropriate action 1`] = `
+exports[`getFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
     "key": "user/someone/feedback",
     "namespace": "default",
-    "suffix": "PROJECT_FEEDBACK",
+    "suffix": "FEEDBACK",
   },
   "payload": Object {
     "data": undefined,
@@ -58,38 +58,58 @@ Object {
     "params": undefined,
     "url": "/users/someone/cohorts/someone/projects/someone/feedback",
   },
-  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK",
+  "type": "@@api-client/API_REQUEST/FEEDBACK",
 }
 `;
 
-exports[`sendProjectFeedback should create an appropriate action 1`] = `
+exports[`getFeedbackBySlug should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "project-feedback-send",
+    "key": "user/someone/feedback/someone",
     "namespace": "default",
-    "suffix": "PROJECT_FEEDBACK_SEND",
+    "suffix": "FEEDBACK_SLUG",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
+  },
+  "type": "@@api-client/API_REQUEST/FEEDBACK_SLUG",
+}
+`;
+
+exports[`sendFeedback should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "feedback-send",
+    "namespace": "default",
+    "suffix": "FEEDBACK_SEND",
   },
   "payload": Object {
     "data": undefined,
     "headers": undefined,
     "method": "POST",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/_send",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone/_send",
   },
-  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_SEND",
+  "type": "@@api-client/API_REQUEST/FEEDBACK_SEND",
 }
 `;
 
-exports[`updateProjectFeedback should create an appropriate action 1`] = `
+exports[`updateFeedback should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "project-feedback-update",
+    "key": "feedback-update",
     "namespace": "default",
-    "suffix": "PROJECT_FEEDBACK_UPDATE",
+    "suffix": "FEEDBACK_UPDATE",
   },
   "payload": Object {
     "data": Object {
@@ -98,8 +118,8 @@ Object {
     "headers": undefined,
     "method": "PUT",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
   },
-  "type": "@@api-client/API_REQUEST/PROJECT_FEEDBACK_UPDATE",
+  "type": "@@api-client/API_REQUEST/FEEDBACK_UPDATE",
 }
 `;

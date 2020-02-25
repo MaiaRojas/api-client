@@ -1,79 +1,100 @@
 import {
-  addProjectFeedback,
-  deleteProjectFeedback,
-  getProjectFeedback,
-  sendProjectFeedback,
-  updateProjectFeedback,
+  addFeedback,
+  deleteFeedback,
+  getFeedback,
+  getFeedbackBySlug,
+  sendFeedback,
+  updateFeedback,
 } from '../../lib/actions/feedback';
 
-describe('getProjectFeedback', () => {
+describe('getFeedback', () => {
   it('should be a function', () => {
-    expect(typeof getProjectFeedback).toBe('function');
+    expect(typeof getFeedback).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(getProjectFeedback({
+    expect(getFeedback({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
+      slug: 'someone',
     })).toMatchSnapshot();
   });
 });
 
-describe('addProjectFeedback', () => {
+describe('getFeedbackBySlug', () => {
   it('should be a function', () => {
-    expect(typeof addProjectFeedback).toBe('function');
+    expect(typeof getFeedbackBySlug).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(addProjectFeedback({
+    expect(getFeedbackBySlug({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
+      slug: 'someone',
+    })).toMatchSnapshot();
+  });
+});
+
+describe('addFeedback', () => {
+  it('should be a function', () => {
+    expect(typeof addFeedback).toBe('function');
+  });
+
+  it('should create an appropriate action', () => {
+    expect(addFeedback({
+      user: 'someone',
+      cohortId: 'someone',
+      projectId: 'someone',
+      slug: 'someone',
       data: { foo: 'bar' },
     })).toMatchSnapshot();
   });
 });
 
-describe('updateProjectFeedback', () => {
+describe('updateFeedback', () => {
   it('should be a function', () => {
-    expect(typeof updateProjectFeedback).toBe('function');
+    expect(typeof updateFeedback).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(updateProjectFeedback({
+    expect(updateFeedback({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
+      slug: 'someone',
       data: { foo: 'bar' },
     })).toMatchSnapshot();
   });
 });
 
-describe('deleteProjectFeedback', () => {
+describe('deleteFeedback', () => {
   it('should be a function', () => {
-    expect(typeof deleteProjectFeedback).toBe('function');
+    expect(typeof deleteFeedback).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(deleteProjectFeedback({
+    expect(deleteFeedback({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
+      slug: 'someone',
     })).toMatchSnapshot();
   });
 });
 
-describe('sendProjectFeedback', () => {
+describe('sendFeedback', () => {
   it('should be a function', () => {
-    expect(typeof sendProjectFeedback).toBe('function');
+    expect(typeof sendFeedback).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(sendProjectFeedback({
+    expect(sendFeedback({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
+      slug: 'someone',
     })).toMatchSnapshot();
   });
 });
