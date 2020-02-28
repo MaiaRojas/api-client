@@ -16,7 +16,7 @@ Object {
     "headers": undefined,
     "method": "POST",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedbacks",
   },
   "type": "@@api-client/API_REQUEST/FEEDBACK_ADD",
 }
@@ -36,49 +36,49 @@ Object {
     "headers": undefined,
     "method": "DELETE",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
+    "url": "/feedbacks/someone",
   },
   "type": "@@api-client/API_REQUEST/FEEDBACK_DELETE",
 }
 `;
 
-exports[`getFeedback should create an appropriate action 1`] = `
+exports[`getFeedbacks should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "user/someone/feedback",
+    "key": "user/someone/feedbacks",
     "namespace": "default",
-    "suffix": "FEEDBACK",
+    "suffix": "FEEDBACKS",
   },
   "payload": Object {
     "data": undefined,
     "headers": undefined,
     "method": "GET",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedbacks",
   },
-  "type": "@@api-client/API_REQUEST/FEEDBACK",
+  "type": "@@api-client/API_REQUEST/FEEDBACKS",
 }
 `;
 
-exports[`getFeedbackBySlug should create an appropriate action 1`] = `
+exports[`getFeedbacksByType should create an appropriate action 1`] = `
 Object {
   "meta": Object {
     "anonymous": undefined,
     "expiration": undefined,
-    "key": "user/someone/feedback/someone",
+    "key": "user/someone/feedbacks/someone",
     "namespace": "default",
-    "suffix": "FEEDBACK_SLUG",
+    "suffix": "FEEDBACK_REVIEWER_SURVEY",
   },
   "payload": Object {
     "data": undefined,
     "headers": undefined,
     "method": "GET",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedbacks/someone",
   },
-  "type": "@@api-client/API_REQUEST/FEEDBACK_SLUG",
+  "type": "@@api-client/API_REQUEST/FEEDBACK_REVIEWER_SURVEY",
 }
 `;
 
@@ -96,7 +96,7 @@ Object {
     "headers": undefined,
     "method": "POST",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone/_send",
+    "url": "/users/someone/cohorts/someone/projects/someone/feedbacks/someone/_send",
   },
   "type": "@@api-client/API_REQUEST/FEEDBACK_SEND",
 }
@@ -118,7 +118,7 @@ Object {
     "headers": undefined,
     "method": "PUT",
     "params": undefined,
-    "url": "/users/someone/cohorts/someone/projects/someone/feedback/someone",
+    "url": "/feedbacks/someone",
   },
   "type": "@@api-client/API_REQUEST/FEEDBACK_UPDATE",
 }

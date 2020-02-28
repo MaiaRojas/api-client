@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addProjectProgress should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-progress-add",
+    "namespace": "default",
+    "suffix": "PROJECT_PROGRESS_ADD",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "POST",
+    "params": undefined,
+    "url": "/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_PROGRESS_ADD",
+}
+`;
+
+exports[`getProjectProgress should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-progress",
+    "namespace": "default",
+    "suffix": "PROJECT_PROGRESS",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/cohorts/someone/projects/someone/progress",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_PROGRESS",
+}
+`;
+
+exports[`updateProjectProgress should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": undefined,
+    "key": "project-progress-update",
+    "namespace": "default",
+    "suffix": "PROJECT_PROGRESS_UPDATE",
+  },
+  "payload": Object {
+    "data": Object {
+      "foo": "bar",
+    },
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/cohorts/someone/projects/someone/",
+  },
+  "type": "@@api-client/API_REQUEST/PROJECT_PROGRESS_UPDATE",
+}
+`;

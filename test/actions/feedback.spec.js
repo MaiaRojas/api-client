@@ -1,38 +1,37 @@
 import {
   addFeedback,
   deleteFeedback,
-  getFeedback,
-  getFeedbackBySlug,
+  getFeedbacks,
+  getFeedbacksByType,
   sendFeedback,
   updateFeedback,
 } from '../../lib/actions/feedback';
 
-describe('getFeedback', () => {
+describe('getFeedbacks', () => {
   it('should be a function', () => {
-    expect(typeof getFeedback).toBe('function');
+    expect(typeof getFeedbacks).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(getFeedback({
+    expect(getFeedbacks({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
-      slug: 'someone',
     })).toMatchSnapshot();
   });
 });
 
-describe('getFeedbackBySlug', () => {
+describe('getFeedbacksByType', () => {
   it('should be a function', () => {
-    expect(typeof getFeedbackBySlug).toBe('function');
+    expect(typeof getFeedbacksByType).toBe('function');
   });
 
   it('should create an appropriate action', () => {
-    expect(getFeedbackBySlug({
+    expect(getFeedbacksByType({
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
-      slug: 'someone',
+      reviewerSurvey: 'someone',
     })).toMatchSnapshot();
   });
 });
@@ -47,7 +46,7 @@ describe('addFeedback', () => {
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
-      slug: 'someone',
+      reviewerSurvey: 'someone',
       data: { foo: 'bar' },
     })).toMatchSnapshot();
   });
@@ -60,10 +59,7 @@ describe('updateFeedback', () => {
 
   it('should create an appropriate action', () => {
     expect(updateFeedback({
-      user: 'someone',
-      cohortId: 'someone',
-      projectId: 'someone',
-      slug: 'someone',
+      id: 'someone',
       data: { foo: 'bar' },
     })).toMatchSnapshot();
   });
@@ -76,10 +72,7 @@ describe('deleteFeedback', () => {
 
   it('should create an appropriate action', () => {
     expect(deleteFeedback({
-      user: 'someone',
-      cohortId: 'someone',
-      projectId: 'someone',
-      slug: 'someone',
+      id: 'someone',
     })).toMatchSnapshot();
   });
 });
@@ -94,7 +87,7 @@ describe('sendFeedback', () => {
       user: 'someone',
       cohortId: 'someone',
       projectId: 'someone',
-      slug: 'someone',
+      reviewerSurvey: 'someone',
     })).toMatchSnapshot();
   });
 });
