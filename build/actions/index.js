@@ -64,6 +64,18 @@ Object.keys(_projects).forEach(function (key) {
   });
 });
 
+var _projectProgress = require("./project-progress");
+
+Object.keys(_projectProgress).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _projectProgress[key];
+    }
+  });
+});
+
 var _reviewerSurvey = require("./reviewer-survey");
 
 Object.keys(_reviewerSurvey).forEach(function (key) {

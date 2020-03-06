@@ -17,11 +17,11 @@ const getLastestVersion = () => (0, _helpers.laboratoriaAPIAction)({
 exports.getLastestVersion = getLastestVersion;
 
 const getReviewerSurvey = ({
-  version,
+  slug,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
   type: 'REVIEWER_SURVEY',
-  url: `/reviewer-survey/${version}`,
+  url: `/reviewer-survey/${slug}`,
   method: 'GET',
   key: 'reviewer-survey',
   ...rest

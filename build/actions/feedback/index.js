@@ -3,85 +3,98 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sendProjectFeedback = exports.deleteProjectFeedback = exports.updateProjectFeedback = exports.addProjectFeedback = exports.getProjectFeedback = void 0;
+exports.sendFeedback = exports.deleteFeedback = exports.updateFeedback = exports.addFeedback = exports.getFeedbacksByType = exports.getFeedbacks = void 0;
 
 var _helpers = require("../helpers");
 
-const getProjectFeedback = ({
+const getFeedbacks = ({
   user,
   cohortId,
   projectId,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'PROJECT_FEEDBACK',
-  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback`,
+  type: 'FEEDBACKS',
+  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedbacks`,
   method: 'GET',
-  key: `user/${user}/feedback`,
+  key: `user/${user}/feedbacks`,
   ...rest
 });
 
-exports.getProjectFeedback = getProjectFeedback;
+exports.getFeedbacks = getFeedbacks;
 
-const addProjectFeedback = ({
+const getFeedbacksByType = ({
+  user,
+  cohortId,
+  projectId,
+  reviewerSurvey,
+  ...rest
+}) => (0, _helpers.laboratoriaAPIAction)({
+  type: 'FEEDBACK_REVIEWER_SURVEY',
+  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedbacks/${reviewerSurvey}`,
+  method: 'GET',
+  key: `user/${user}/feedbacks/${reviewerSurvey}`,
+  ...rest
+});
+
+exports.getFeedbacksByType = getFeedbacksByType;
+
+const addFeedback = ({
   user,
   cohortId,
   projectId,
   data,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'PROJECT_FEEDBACK_ADD',
-  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback`,
+  type: 'FEEDBACK_ADD',
+  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedbacks`,
   method: 'POST',
   data,
-  key: 'project-feedback-add',
+  key: 'feedback-add',
   ...rest
 });
 
-exports.addProjectFeedback = addProjectFeedback;
+exports.addFeedback = addFeedback;
 
-const updateProjectFeedback = ({
-  user,
-  cohortId,
-  projectId,
+const updateFeedback = ({
+  id,
   data,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'PROJECT_FEEDBACK_UPDATE',
-  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback`,
+  type: 'FEEDBACK_UPDATE',
+  url: `/feedbacks/${id}`,
   method: 'PUT',
   data,
-  key: 'project-feedback-update',
+  key: 'feedback-update',
   ...rest
 });
 
-exports.updateProjectFeedback = updateProjectFeedback;
+exports.updateFeedback = updateFeedback;
 
-const deleteProjectFeedback = ({
-  user,
-  cohortId,
-  projectId,
+const deleteFeedback = ({
+  id,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'PROJECT_FEEDBACK_DELETE',
-  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback`,
+  type: 'FEEDBACK_DELETE',
+  url: `/feedbacks/${id}`,
   method: 'DELETE',
-  key: 'project-feedback-delete',
+  key: 'feedback-delete',
   ...rest
 });
 
-exports.deleteProjectFeedback = deleteProjectFeedback;
+exports.deleteFeedback = deleteFeedback;
 
-const sendProjectFeedback = ({
+const sendFeedback = ({
   user,
   cohortId,
   projectId,
+  reviewerSurvey,
   ...rest
 }) => (0, _helpers.laboratoriaAPIAction)({
-  type: 'PROJECT_FEEDBACK_SEND',
-  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedback/_send`,
+  type: 'FEEDBACK_SEND',
+  url: `/users/${user}/cohorts/${cohortId}/projects/${projectId}/feedbacks/${reviewerSurvey}/_send`,
   method: 'POST',
-  key: 'project-feedback-send',
+  key: 'feedback-send',
   ...rest
 });
 
-exports.sendProjectFeedback = sendProjectFeedback;
+exports.sendFeedback = sendFeedback;
