@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`getAdmissionData should create an appropriate action 1`] = `
+Object {
+  "meta": Object {
+    "anonymous": undefined,
+    "expiration": 300000,
+    "key": "user/someone/admission-data",
+    "namespace": "default",
+    "suffix": "USER_ADMISSION_DATA",
+  },
+  "payload": Object {
+    "data": undefined,
+    "headers": undefined,
+    "method": "GET",
+    "params": undefined,
+    "url": "/users/someone/admission-data",
+  },
+  "type": "@@api-client/API_REQUEST/USER_ADMISSION_DATA",
+}
+`;
+
 exports[`userCohorts should create an appropriate action from input params 1`] = `
 Object {
   "meta": Object {

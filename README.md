@@ -395,3 +395,10 @@ Get user's academic profile.
 ##### Params
 - `user`: User ID or email to get the academic profile from.
 - `rest`: Other parameters to be passed to `laboratoriaAPIAction`.
+
+#### `getAdmissionData({ email, ...rest })`
+Get user's Admission data.
+
+##### Params
+- `email`: Email to get the Admission data.
+- `rest`: Other parameters to be passed to `laboratoriaAPIAction`.

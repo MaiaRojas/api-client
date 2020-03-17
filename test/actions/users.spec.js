@@ -1,4 +1,9 @@
-import { userCohorts, userFeed, userProfile } from '../../lib/actions/users';
+import {
+  userCohorts,
+  userFeed,
+  userProfile,
+  getAdmissionData,
+} from '../../lib/actions/users';
 
 describe('userCohorts', () => {
   it('should be a function', () => {
@@ -27,5 +32,15 @@ describe('userProfile', () => {
 
   it('should create an appropriate action', () => {
     expect(userProfile({ user: 'someone' })).toMatchSnapshot();
+  });
+});
+
+describe('getAdmissionData', () => {
+  it('should be a function', () => {
+    expect(typeof getAdmissionData).toBe('function');
+  });
+
+  it('should create an appropriate action', () => {
+    expect(getAdmissionData({ email: 'someone' })).toMatchSnapshot();
   });
 });
